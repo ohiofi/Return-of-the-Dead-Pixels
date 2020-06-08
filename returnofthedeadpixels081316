@@ -632,6 +632,7 @@ random [fire3|floor no player] -> [burntfloor2|fire2] Sfx7
 random [fire3|tree] -> [burntfloor2|fire2] Sfx7
 [fire3|grass] -> [fire2 burntfloor|fire1]
 [fire3|Car01] -> [burntfloor2|fire1]
+[fire3|Crate] -> [burntfloor2|fire1]
 [fire|fire|fire] -> [fire1|burntfloor|fire1]
 [fire|cars]->[fire|burntcar]
 [firestarter|player]->[fire1|player]
