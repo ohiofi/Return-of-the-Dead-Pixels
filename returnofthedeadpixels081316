@@ -647,8 +647,8 @@ random [fire3|tree] -> [burntfloor2|fire2] Sfx7
 ==============
 WINCONDITIONS
 ==============
-All Target on Player
-All targetboat on Player
+Some Target on Player
+Some targetboat on Player
 All Town on Player
 All Barn on Player
 All Girl on Player
@@ -1169,22 +1169,22 @@ Message Level 12
 Message Get to the Boat
 
 *****************x.zx.zx.zx.zxz.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxx.xxx.g..xxx.xxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxexxxxx.xxxxx.xxxxxxxxxxxz.xz.xz.xz.xz.xz.xz.
-****₇₆₅*********x2ddxdddxd.dxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxx.xxxxxxx.g.g..xxxxxxx.xxxxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxd.dxdddxddxxxxxxx.xxxxexxx&x
-***₄₃₂₁********.4.........x.....x.....g..xx.x........x.....x...............x.......g.xxg........x...............x.....x.......ex.xxe.g.g.g.x.....x.z.............x...g.g.exz
-*****ff******..?.x...x.....gx...x....z..gxx.x...z....x...xg.....x...x.?..x......!.g.x..xg.....?..g........x...x........x....z..xx.x..z....x........x.z.x........g..?..iph.x.
-*****ff****$...6x.!....x..x...x..x.......x.xx.......x..x...x..x....!.x..x.$........x.xx.x..!......x..?.x...x.....gx...x....z...x.xxg..z....x...xg.....x...x.?..x......!..gx.
-*****ff***....3.....x...$..5.xg...x......xx.x......x...gx.x..$...x...........g.?..x.xxxx.x.......$zx..x.!....x..x...x..x.......xx.x.......x..x...x..x....!.x..x.$.........xz
-*****ff.*!5......z.2..3...g......x...x...x.xx...x...x......g...x..x.z.x....z!.......x.xx..z.?.g...........x...$..x.xg...x......x.xx......x...gx.x..$...x...........g.?...g&x
-*****…g….2..x.6.x...4.......!x....x......xx.x......x....x!..z....x...x.x.x.....g.x..xx.x.......!z....x.z.x..x...g......x...x...xx.x...x...x......g...x..x...x.....!.......x.
-****....3..4.2.$..3...6.......x?...x.....x.x......x...?x.......x...x..$.x.x...x.x.x.x.xx..x.g.....x.x.x...x....z..!x....x......x.xx.z....x....x!.......x.....x.x.....g.x..xz
-***....5..6.....x..5.2......x....z...g...x..x...g...z....x....z.x.x..x.....x.x.x.....x.x...x.x...x.x.$..x...x.......x?...x......x.x.....x...?x.......x...x..$...x...x.x.x.xx
-****...4.5.x.x...?.g......x....z.$x....x.xx.x.x....x$.z....x......g.?...x.x.x.......x.x.x...x.x.x.....x..x.x.z....x....z...g...x..x...g........x......x.x..x.....x.x.x.z.x.z
-**....6g..3...xx..x.!..x......x..x..?...x.xx.x...?..x..x......x..!.x..xx......g.....xx.x.......x.x.x...?.g......x....z.$x....x.x.xx.x....x$......x......g.?...x.x.x......dx.
-***...4.#.2....g.x...x.$x...x.......g....x..x....g.......x...x$.x...x.g...........z.x.xx.....g......xx..x.!..x......x..x..?...x.xx.x...?..x..x......x..!.x..xx......g....dxx
-****...3C#.4..x.....g.....!x..........!...xx...!...........!.....gx............z....xx.x.z...........g.x...x.$x...x.......g....x..x....g.......x...x$.x...x.g...........zdxz
-*****..3.C#........xg.....!...........!.g.xx..g!..........x!.....g.....x.......z....x.xx....z.......x....xg.....!x..........!...xx...!..........x!.....gx....x...........dx.
-******..#.#.g.g..x.......g...?...........g.g.g..........?...g.......x...............xx.x...............x.......g...?........................z.?...g.......x.zg.g.g.g.g.g.ex.
-*******...Cx.xxx.xdxdxxdx.xdxxxxxxxxxxxxx.g.gxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxexxxxdxdxdxxxdxxxxxxxxxxxx
-********....xxz.zx.zxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxx.xxxxxexxxx.xxxxxxxxxxxxxxxexxxxx.xxxxxxxxxxxxxxexxxxx.xxxxx.xxxxxxxxxxxz.xz.xz.xz.xz.xz.xz.
+****₇₆₅*********x2ddxdddxd.dx536.432x536xxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxx.xxxxxxx.g.g..xxxxxxx.xxxxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxd.dxdddxddxxxxxxx.xxxxexxx&x
+***₄₃₂₁********#4.........x.....6.....g..xx.x........x.....x...............x.......g.xxg........x...............x.....x.......ex.xxe.g.g.g.x.....x.z.............x...g.g.exz
+*****ff******##?.#...#.....g#...x....z..gxx.x...z....x...xg.....x...x.?..x......!.g.x..xg.....?..g........x...x........x....z..xx.x..z....x........x.z.x........g..?..iph.x.
+*****ff****$#..6x.!....x..#...x..x.......x.x........x..x...x..x....!.x..x.$........x.xx.x..!......x..?.x...x.....gx...x....z...x.xxg..z....x...xg.....x...x.?..x......!..gx.
+*****ff***#...3.....x...$..5.cg...x.......x.x......x...gx.x..$...x...........g.?..x.xx.x.x.......$zx..x.!....x..x...x..x........x.x.......x..x...x..x....!.x..x.$.........xz
+*****ff.*!5......z.2..3.5.g......#...x...x.x....x...x......g...x..x.z.x....z!.......x.xx..z.?.g...........x...$..x.xg...x......x.x.......x...gx.x..$...x...........g.?...g&x
+*****…g…#2..x.6.#...4.......!#....x.......x.x......x....x!..z....x...x.x.x.....g.x..xx.x.......!z....x.z.x..#...g......x...x....x.x...x...x......g...x..x...x.....!.......x.
+****...#3..4.2.$..c...c.......5?...#.....x.x......x...?x.......#...x..$.#.x...x.x.x.x.x...x.g.....x.x.x...x....z..!x....x......x.x..z....x....x!.......x.....#.x.....g.x..xz
+***....5..6....##..5.2...4..3....z...g...x..x...g...z....x....z.x.x..x.....x.x.x.....x.x...x.x...x.x.$..x...x.......x?...x......x.x.....#...?x.......x...x..$...x...x.x.x.xx
+***...#4.5.#.#...?.g......#....z.$x....x.xx.x.x....#$.z....x......g.?...x.x.x.......x.x.....x.x.x.....x..x.x.z....x....z...g...x..x...g........x......x.x..x.....x.x.x.z.x.z
+**....6g..3...##..3.!..#......#..c..?...x.xx.x...?..x..x......x..!.x..xx......g......x.x.......x.x.#...?.g......x....z.$x....x.x.xx.x....x$......x......g.?...x.x.x......dx.
+**....4.#.2....g.#..6c.$5...2.......g....x..x....g.......x...x$.x...x.g...........z.x.x......g......xx..x.!..x......x..#..?...x.xx.x...?..x..x......#..!.x..xx......g....dxx
+***....3c#.4..#.....g.....!#..........!...xx...!...........!.....gx............z.....x.x.z...........g.x...x.$x...x.......g....x..x....g.......x...x$.x...x.g...........zdxz
+*****..3.c#..###...#g.....!...........!.g.....g!..........x!.....g.....x.......z....x.xx....z.......x....xg.....!x..........!...xx...!.#........x!.....gx....x...........dx.
+******..#.#.g.g..x.......g...?...........g.g.g..........?...g.......x...............xx.x...............x.......g...?..................#z#...z.?...g.......x.zg.g.g.g.g.g.ex.
+*******...cx.x##.xdxd23d4.6d5x342x536xxx..g.g.xxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxx......xxx#xxxxxxxxxxexxxxdxdxdxxxdxxxxxxxxxxxx
+********....##z.zx.zxxxxxxxxxxx.xxxxx.xxx....xxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxx.xxxxxexxxx.xxxxxxxxxxxxxxxexxxxx.xxxxxxxxxxxxx.e..xxx.xxxxx.xxxxxxxxxxxz.xz.xz.xz.xz.xz.xz.
 
 MESSAGE You Win!
