@@ -666,12 +666,11 @@ LEVELS
 =======
 
 
-(
+
 MESSAGE Level 1
 MESSAGE Get to the Farm. Don't get Bit
 (9zombies)
-)
-(
+
 ..xxxxxxxx.xxxxx.xxxxxx.xxxx.xxx.xxxxxxxx..
 .x........x.....x......x....x...x........x.
 .x..z....x........x...x.#......g..?....b..x
@@ -690,10 +689,10 @@ x...!......#...x!.....gx....x............x.
 ..xxxxxxxxxxxxxxxx.xxxxxx.xxxxxxxxxxxxxxx..
 
 MESSAGE Level 2
-MESSAGE Rescue the Girl from the Zombies
+MESSAGE You can hear a Woman screaming for help!
+MESSAGE Rescue the Woman from the Zombies
 (11z)
-)
-(
+
 ..xxxxxxxxxxxxxxxxxxxxxxxxxrxxxxxxxxxxxxxxxx..
 .x......g.........x......#...#..............x.
 x...x..............x......###.xz.?.xg...x.x..x
@@ -714,10 +713,11 @@ xx...........................g.....#......x..x
 ..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..
 
 MESSAGE Level 3
-Message Find the Car & Push it to the Blue Garage
+MESSAGE Woman: "Thank you so much for saving me. My name is Emily."
+MESSAGE Emily: "My car broke down near here. We could fix it in that garage."
+MESSAGE Find Emily's Red Car & Push it to the Blue Garage
 (6z)
-)
-(
+
 ..xx.xxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx..
 .x..x...g.....!.g........x......g.!......?...g.x.
 x..z......?.......x.....x.?g.....c......x.x..!..x
@@ -740,9 +740,8 @@ x..x.....!.x.................x..$..gx...........x
 ..xxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxx.xxxxxx..
 
 MESSAGE Level 4
-Message The Girl has been Kidnapped. Rescue her from the Evil Biker Gang
-)
-(
+Message Emily has been Kidnapped! Rescue her from the Evil Biker Gang
+
 ...xxxx.x....xxx....xx.x....xx.......xxxxxxx.xxxx...
 ..x....x#xxxx...xxxx..x.xxxx..xxxxxxx.......x..xxx..
 .x..x...g#.....!.......x....x......g!.......?...g.x.
@@ -769,8 +768,7 @@ cap...........?.x.......g..x...........#..........x.
 MESSAGE Level 5
 Message Collect 7 Tools to Fix the Car
 (17z)
-)
-(
+
 +.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...
 .x................g...................g...........x.
 xx................x....!x..z?.....x............x..x.
@@ -799,10 +797,9 @@ xxp.............$................g............x...x.
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..
 
 MESSAGE Level 6
-Message The Garage is Surrounded by the Evil Biker Gang. Get both yourself & the Girl to the Town
+Message The Garage is Surrounded by the Evil Biker Gang. Get both yourself & Emily to the Town
 (18z)
-)
-(
+
 .xx.xxxxxxxxxxwwxxx..
 xx.xx.......x.ww.x.x.
 x.xx.........x..x..xx
@@ -922,8 +919,7 @@ MESSAGE Level 7
 Message Welcome to the town of Grantville!
 Message Collect 9 First Aid Kits
 (32z)
-)
-(
+
 +.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....
 .xx....g.....g.......g...g..#.....g.....g....g.....g.....x..
 xxx..x...............x....!x.#..z?.#...x..............x..xx.
@@ -966,8 +962,7 @@ Message Level 8
 Message The Evil Biker Gang has found you
 Message They have set the town on fire
 Message Exit on the South side of town. Don't let the fire surround you
-)
-(
+
 xxxxxxxxxxxxxxxxxxxxxxxxxx3xddxxxxxxxxxxxxxxdxxxxxxxxxxx..
 xx..d.g.....g.......g...g..4.....g.....#.d..gd....g..d..x.
 xx..xd..............x....!x.2...?.c...x....d....d...dxd.xx
@@ -1008,8 +1003,7 @@ xx..d...d....z..$.........................x.x.x.x..x....x.
 
 Message Level 9
 Message Get to the Blue Garage. Don't let the fire surround you
-)
-(
+
 ...xggxxxxxxx&exxxxxxgg
 ...xexgdgd&xeJJ&xegdgxg
 ...xgxdgdg..x..x.gdgdx&
@@ -1127,8 +1121,7 @@ g.xgxxxxxxtaxxxxxxxxx..
 
 Message Level 10
 Message Exit on the South side of the Garage.
-)
-(
+
 ggxxxxxxxxxxxxx&xexxxxxxxipxxxx&xex&xex&xexxxxxxxxggx
 gxg.....z.....g.g.g.......……egeg.&geg.g.g.g.......xgx
 eggg..z....z...g.gxg...!x...?….g&gxgeg.g.g.....xz.gex
@@ -1158,8 +1151,7 @@ zz…z…zz…z…z…z…zzxzxzx…x.xttxxxxxxxxxxxxxxxxxx.x...x.x
 
 Message Level 11
 Message Get to the Farm
-)
-(
+
 ..xxxxx&xex&xex&xxxxxxxxxxx&xxxxxxxxxx&xxxxxx&xxx
 .xz…x…z.z.g.g.!.............g.g.g.!..g.g.?.g.g.xx
 xx…z…z.z.g?g......x.....x.?g.....c......x.x..!gxx
@@ -1183,25 +1175,26 @@ xht.xxxgxxgxxgxxgxxgxxgxxgxxgxgxgxgxgxgxgxgxgxg.g
 
 Message Level 12
 Message Get to the Boat
-)
+
 
 *****************x.zx.zx.zx.zxz.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxx.xxx.g..xxx.xxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxexxxxx.xxxxx.xxxxxxxxxxxz.xz.xz.xz.xz.xz.xz.
-****₇₆₅*********x2ddxdddxd.dx536.432x536xxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxx.xxxxxxx.g.g..xxxxxxx.xxxxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxd.dxdddxddxxxxxxx.xxxxexxx&x
+****₇₆₅*********x2ddxdddxd.dx536.432x536x....xxxxxxxx.xxxxx.xxxxxxxxxxxxxxx.xxxxxxx.g.g..xxxxxxx.xxxxxxxxxxxxxxx.xxxxx.xxxxxxxx....xxxxxxxx.xxxxd.dxdddxddxxxxxxx.xxxxexxx&x
 ***₄₃₂₁********#4.........x.....6.....g..xx.x........x.....x...............x.......g.xxg........x...............x.....x.......ex.xxe.g.g.g.x.....x.z.............x...g.g.exz
-*****ff******##?.#...#.....g#...x....z..gxx.x...z....x...xg.....x...x.?..x......!.g.x..xg.....?..g........x...x........x....z..xx.x..z....x........x.z.x........g..?..iph.x.
+*****ff******##?.#...#.....g#...x....z..g.x.x...z....x...xg.....x...x.?..x......!.g.x..xg.....?..g........x...x........x....z..xx.x..z....x........x.z.x........g..?..iph.x.
 *****ff****$#..6x.!....x..#...x..x.......x.x........x..x...x..x....!.x..x.$........x.xx.x..!......x..?.x...x.....gx...x....z...x.xxg..z....x...xg.....x...x.?..x......!..gx.
 *****ff***#...3.....x...$..5.cg...x.......x.x......x...gx.x..$...x...........g.?..x.xx.x.x.......$zx..x.!....x..x...x..x........x.x.......x..x...x..x....!.x..x.$.........xz
 *****ff.*!5......z.2..3.5.g......#...x...x.x....x...x......g...x..x.z.x....z!.......x.xx..z.?.g...........x...$..x.xg...x......x.x.......x...gx.x..$...x...........g.?...g&x
 *****…g…#2..x.6.#...4.......!#....x.......x.x......x....x!..z....x...x.x.x.....g.x..xx.x.......!z....x.z.x..#...g......x...x....x.x...x...x......g...x..x...x.....!.......x.
-****...#3..4.2.$..c...c.......5?...#.....x.x......x...?x.......#...x..$.#.x...x.x.x.x.x...x.g.....x.x.x...x....z..!x....x......x.x..z....x....x!.......x.....#.x.....g.x..xz
+****...#3..4.2.$..c...c.......5?...#.....x.x......x...?x.......#...x..$.#.x...x.x.x.x.x...#.g.....x.x.x...x....z..!x....x......x.x..z....x....x!.......x.....#.x.....g.x..xz
 ***....5..6....##..5.2...4..3....z...g...x..x...g...z....x....z.x.x..x.....x.x.x.....x.x...x.x...x.x.$..x...x.......x?...x......x.x.....#...?x.......x...x..$...x...x.x.x.xx
 ***...#4.5.#.#...?.g......#....z.$x....x.xx.x.x....#$.z....x......g.?...x.x.x.......x.x.....x.x.x.....x..x.x.z....x....z...g...x..x...g........x......x.x..x.....x.x.x.z.x.z
 **....6g..3...##..3.!..#......#..c..?...x.xx.x...?..x..x......x..!.x..xx......g......x.x.......x.x.#...?.g......x....z.$x....x.x.xx.x....x$......x......g.?...x.x.x......dx.
 **....4.#.2....g.#..6c.$5...2.......g....x..x....g.......x...x$.x...x.g...........z.x.x......g......xx..x.!..x......x..#..?...x.xx.x...?..x..x......#..!.x..xx......g....dxx
-***....3c#.4..#.....g.....!#..........!...xx...!...........!.....gx............z.....x.x.z...........g.x...x.$x...x.......g....x..x....g.......x...x$.x...x.g...........zdxz
+***....3c#.4..#.....g.....!#..........!...xx...!...........!.....gx............z.#...x.x.z...........g.x...x.$x...x.......g....x..x....g.......x...x$.x...x.g...........zdxz
 *****..3.c#..###...#g.....!...........!.g.....g!..........x!.....g.....x.......z....x.xx....z.......x....xg.....!x..........!...xx...!.#........x!.....gx....x...........dx.
 ******..#.#.g.g..x.......g...?...........g.g.g..........?...g.......x...............xx.x...............x.......g...?..................#z#...z.?...g.......x.zg.g.g.g.g.g.ex.
-*******...cx.x##.xdxd23d4.6d5x342x536xxx..g.g.xxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxx......xxx#xxxxxxxxxxexxxxdxdxdxxxdxxxxxxxxxxxx
+*******...cx.x##.xdxd23d4.6d5x342x536xxx..g.g.xxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxx....xxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxx......xxx#xxxxxxxxxxexxxxdxdxdxxxdxxxxxxxxxxxx
 ********....##z.zx.zxxxxxxxxxxx.xxxxx.xxx....xxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxx.xxxxxexxxx.xxxxxxxxxxxxxxxexxxxx.xxxxxxxxxxxxx.e..xxx.xxxxx.xxxxxxxxxxxz.xz.xz.xz.xz.xz.xz.
+
 
 MESSAGE You Win!
