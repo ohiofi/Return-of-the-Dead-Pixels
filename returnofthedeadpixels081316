@@ -30,28 +30,28 @@ Gray Lightgray DarkGray
 00000
 
 brickwall
-#780000 #808080 #404040 #c0c0c0 #912800 #821821
+#780000 black #404040 #c0c0c0 #912800 #821821
 05014
 02405
 40502
 01050
 50240
 brickwallSide
-#780000 #808080 #404040 #3f0000 #912800 #821821 darkgray
+#780000 black #404040 #3f0000 #912800 #821821 darkgray
 05014
 02405
 33532
 36353
 53233
 fireproofwall
-#780000 #808080 #404040 #3f0000 #912800 #821821 darkgray
+#780000 black #404040 #3f0000 #912800 #821821 darkgray
 05014
 02405
 33532
 36353
 53233
 ShelfTop
-#780000 #808080 #912800 #821821 brown darkbrown green blue orange
+#780000 black #912800 #821821 brown darkbrown green blue orange
 03012
 44444
 44444
@@ -274,40 +274,40 @@ Black Orange White LightBrown Grey
 44111
 42221
 11331
-11111
-40404
+10141
+44444
 
 Car03
 Black Green White LightGreen Grey
 44111
 42221
 11331
-11111
-40404
+14101
+44444
 
 Car04
-Grey Purple White DarkBlue Black
+Grey purple White DarkBlue Black
 00000
 00111
 02221
 11331
-14141
+10141
 
 Car05
-Grey DarkBlue White Blue
+Grey lightblue White lightgreen Black
 00000
 00111
 02221
 11331
-11111
+14101
 
 Car06
-Grey Yellow White LightBrown
+Grey Yellow White LightBrown Black
 00000
 00111
 02221
 11331
-11111
+10141
 BurntCar
 Grey Black DarkGrey #2a2a1a
 .....
@@ -482,6 +482,9 @@ grey blue lightblue darkgrey
 00001
 11111
 
+win
+transparent
+
 
 
 =======
@@ -522,6 +525,7 @@ J = town2
 K = firstAidKit
 l = tools
 n = brickwall
+o = chairl
 P = PlayerMan
 Player = PlayerMan or Girl2
 R = Girl
@@ -534,9 +538,8 @@ wallboat = boat3 or boat4 or boat5 or boat6 or boat7
 walls = brickwall or brickwallSide or shelftop or shelfbottom or  shelfbottomempty or chairl or chairr or table
 water = water1 or water2 or water3 or water4 or water5
 x = tree
-z = zombie
-o = chairl
 y = chairr
+z = zombie
 { = shelftop
 } = shelfbottom
 ~ = shelfbottomempty
@@ -550,6 +553,8 @@ y = chairr
 ₇=boat7
 ∪ = fireproofwall
 ✓ = chckpnt
++ = win
+goal = target or targetboat or town or barn or girl
 
 =======
 SOUNDS
@@ -588,6 +593,7 @@ Grass, Blood1, Blood2, Blood3,Floor,chckpnt,burntfloor,burntfloor2,fireproofgras
 Target, Barn,  Girl, GasStation,GasStation2,town,town2,barn2,targetboat
 Player, tree, Car01, DeadPlayer,dp2,dp3,walls,zombie,tools,Car02,Car03,Car04,Car05,car06,BadGuy,firstAidKit,fire1,fire2,fire3,burntcar,fireproofwall,water,wallboat,Crate
 Blood4,blood5
+win
 
 ======
 RULES
@@ -643,16 +649,14 @@ random [fire3|tree] -> [burntfloor2|fire2] Sfx7
 [water2] -> [water3]
 [water1] -> [water2]
 
+[Player goal] -> [Player goal win] again
+[Car01 GasStation] -> [Car01 GasStation win] again
+
 
 ==============
 WINCONDITIONS
 ==============
-Some Target on Player
-Some targetboat on Player
-All Town on Player
-All Barn on Player
-All Girl on Player
-All GasStation on Car01
+Some Win
 No Tools
 No firstAidKit
 
@@ -662,341 +666,350 @@ LEVELS
 =======
 
 
-
+(
 MESSAGE Level 1
 MESSAGE Get to the Farm. Don't get Bit
 (9zombies)
-
-..xxxxxxxx.xxxxx.xxxxxxxxxxxxxxx.xxxxxxxxxx
-.x........x.....x......x........x........xx
-.x..z....x........x...x.#......g..?....b.xx
-xx........x...xg.....#...x.?..x......!...x.
-xx.......x..x...x..x....!.#..xz$.........xx
-.xx.#...x...gx.x..$...x...#.......g.?.z..xx
-xx...x...x......g...x..x.z.x.....!.......x.
-xx......x....x!..z....x...x.x.x.....g.x..xx
-xx.....x...?x.......x...x..$.x.x...x.x.x.xx
-.x...g.#.z....#....z.x.x..x.....x.x.x...x.x
-xx......x$.z....x...#..g.?...x.x.x.......x.
-xxg...?..x..x......x..!.x..xx......g.....xx
-.x....g.......x...x$.x...x.g...........z.xx
-xx..!......#...x!.....gx....x............x.
-xxp..........?...gx......x...............x.
-xxxxxxxxxxxxxxxxxx.xxxxxx.xxxxxxxxxxxxxxx..
+)
+(
+..xxxxxxxx.xxxxx.xxxxxx.xxxx.xxx.xxxxxxxx..
+.x........x.....x......x....x...x........x.
+.x..z....x........x...x.#......g..?....b..x
+x.........x...xg.....#...x.?..x......!...x.
+x........x..x...x..x...z!.#..xz$..........x
+.xx.#...x...gx.x..$.......#.......g.?.z...x
+x....x...x......g...x#...x.x.....!.......x.
+x.......x....x!..z....x.#...x.x.....g.x...x
+x......x...?x.......x...x..$.x.x...x.x.x.x.
+.x...g.#.z....#....z.x....x.....x.x.x...x..
+x.......x$.z....x...#..g.?...x.x.x.......x.
+x.g...?..x..x......x..!.x..xx......g......x
+.x....g.......x...x$.x...x.g...........z..x
+x...!......#...x!.....gx....x............x.
+.xp..........?...gx......x...............x.
+..xxxxxxxxxxxxxxxx.xxxxxx.xxxxxxxxxxxxxxx..
 
 MESSAGE Level 2
 MESSAGE Rescue the Girl from the Zombies
 (11z)
-
-.xxxxxxxxxxxxxxxxxxxxxxxxxxRxxxxxxxxxxxxxxxx..
-xx......g..........x.....#...#..............x.
-xx..x...............x.....###.xz..x.g...x.x.xx
-.x.x....#...g...x..x....x....x$.g..x........xx
-xx.....g.......xz...x...zx..x..x...zx.......xx
-xx.......!...........x....x......g!.........x.
-xx....$..g...?.....x.....z....x...zx......g.xx
-.x.!..............!............x.?x.........xx
-xx............z..g...xz.....zx..............xx
-xx..?...............?.x.....x...$...........xx
-.x..g..................$...xg...............x.
-xx..................x......z..x..?...g......xx
-xx...g...........x......!........zx.........xx
-xx......g..................?.....x!..#.g....xx
-.x.............................$g........x..x.
-xx...........................g............x.xx
-.hP.......g........................g........xx
-..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+)
+(
+..xxxxxxxxxxxxxxxxxxxxxxxxxrxxxxxxxxxxxxxxxx..
+.x......g.........x......#...#..............x.
+x...x..............x......###.xz.?.xg...x.x..x
+.x.x....#...g..x..x.....x....x$.g...x........x
+x.....#g......x.z..x....zx..x..x...z.x.......x
+x........!..........x.....x......g!.........x.
+x.....$..g...?....x......z....x...z.x.....g..x
+.x.!..............!#...........x.$.x.........x
+x.............z..g...xz.....zx....#..........x
+x...................?.x.....x...!............x
+.x..?..................$...xg...............x.
+x...................x.....#z..x..?...g.......x
+x....g...........x...#..!........zx..........x
+x.......g......x...........?.....x!....g.....x
+.x.............................$g....#...x..x.
+xx...........................g.....#......x..x
+.hp.......g........................g........x.
+..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..
 
 MESSAGE Level 3
 Message Find the Car & Push it to the Blue Garage
 (6z)
-
-..xxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxx
+)
+(
+..xx.xxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx..
 .x..x...g.....!.g........x......g.!......?...g.x.
-xx.z......?.......x.....x.?g.....C......x.x..!.xx
-xx..g..x.......z...xg.x..x......x....x.x.x.g...xx
-xxg...x....S....g...x..x..$x....!..x.x......?..x.
-.x....gx..!...x......x...?.#g......x...........xx
-xx......x.x.g...?..z..#x......x.....x...x......xx
-.x...$.x......xg....?x.....x.x.....x$.x..x..g..xx
-xx......x.#.g..........x......x.....x..x.......xx
-x.x.!....x.x.x.....x..xz..g..#....x..x......x..xx
-.x........z.x.x.x...x.........x.x..x...x....?.x..
-xx..x......!g..x.x...x.........x.x....x...g..x.xx
-xx...!.x..........#.x........gx.....!...x......xx
-xx....x...x....g...x......x....#....z....x...!.xx
-.x..........x.......x.g.........x?x.......x....xx
-xx......x...g......x........!.x..x.x.........x.x.
-xx.x.....!.x.................x..$..gx..........xx
-.x..gx.......x....$....x...g.......?........x..xx
-.hP..........?...........x........g............x.
-..xxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxx..
+x..z......?.......x.....x.?g.....c......x.x..!..x
+x...g..x.......z...xg.x..x......x....x...x.g....x
+x.g...x....s....g...x..x..$x....!..x........?..x.
+.x....gx..!...x......x...?.#g...................x
+x.......x.x.g...?..z..#x......x.....x...x.......x
+.x...$.x......xg....?x.....x.x.....x$.x..x..g...x
+x.......x.#.g..........x......x........x........x
+x...!....x.x.x.....x..xz..g..#......x#......x..x.
+.x........z.x.#.x...x.........x.x..x...x....?...x
+x...x......!g..x.x...x.........x.x#...x...g..x.x.
+x....!.x..........#.x........gx.....!...x.......x
+x.....x...x....g...x......x....#....z....x...!..x
+.x..........x.......x.g.........x?........x.....x
+x.......x...g......x........!.x..............x.x.
+x..x.....!.x.................x..$..gx...........x
+.x..gx.......x....$....x...g.......?........x...x
+.hp..........?.............x......g.....x......x.
+..xxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxx.xxxxxx..
 
 MESSAGE Level 4
 Message The Girl has been Kidnapped. Rescue her from the Evil Biker Gang
-
-...xxxxxx....xxx....xxxxxxxxxx......xxxxxxxxxxxxx...
-..x....x#xxxxx.xxxxx..x.xxxx.xxxxxxxxx......xxxxxx..
+)
+(
+...xxxx.x....xxx....xx.x....xx.......xxxxxxx.xxxx...
+..x....x#xxxx...xxxx..x.xxxx..xxxxxxx.......x..xxx..
 .x..x...g#.....!.......x....x......g!.......?...g.x.
-xx.d....#..?.......x......x.?g.d...........x.x..!.xx
-xx..gd.x....#.......xg..x..x......x....x..x.x.g...xx
-xx....x.........dg...x...x..$x..d.!..x.x.......?..x.
-.x....gx...!...x......x...d?.xg#.................dxx
-xx.......x......?..d....#......xg..R..x...........xx
-.x...$gx.......x.....?x......xgx.....x$...........xx
-xx......x..x........d....x......xg....x.........d.xx
-x.x.!..g.x..x.x.....x...xd.....x.....x.........xg.xx
+x..d....#..?.......x......x.?g.d...........x.x..!..x
+x...gd.x....#.......xg..x..x......x....x..x.x.g....x
+x.....x.........dg...x...x..$x..d.!..x.x.......?..x.
+.x....gx...!...x......x...d?.xg#.................d.x
+x........x......?..d....#......xg..r..x............x
+.x...$gx.......x.....?x......xgx.....x$............x
+.x......x..x........d....x......xg....x.........d..x
+x.x.!..g.x..x.x.....x...xd.....x.....x.........xg.x.
 .x......g...zx.#.x...x.....d....x.x.x..........?.x..
-xx..x.......!...x.x...x.g........x.x.....x......x.xx
-xx...!.x...........x.x.........gx.....!..d........xx
-xx$...x....x....g.d.x.......x....x....d.....x...!.xx
-.x..?...g....#..d....x....d.......x?x.....g..x....xx
-xx......x...........x......d..!.x..x.x..........x.x.
-xx.x.....!..x..............gd..x..$...x.........g.xx
-.x...x........xg.x.$.....x...........?..xg.....x..xx
-CaP...........?.x.......g..x...........#..........x.
-..xxxxxxxx#xxxxx.xxx..xxxxx...xxxxxxxxxxxxx...xxxx..
-...xxxxxx#.#.xxx....xxxxxxxxxx......xxxxxxxxxxxxx...
+x...x.......!...x.x...x.g........x.x.....x......x.xx
+x....!.x...........x.x.........gx.....!..d.........x
+x.$...x....x....g.d.x.......x....x....d.....#...!..x
+.x..?...g....#..d....x....d.......x?x.....g..x.....x
+x.......x...........x......d..!.x..x.x..........x.x.
+x..x.....!..x..............gd..x..$...x.........g..x
+.x...x........xg.x.$.....x...........?..xg.....x...x
+cap...........?.x.......g..x...........#..........x.
+..xxxxxxxx#xxxxx.xxx..xxxxx...xxxxxx.xxxxxx...xx.x..
+...xxxxxx#.#.xxx....xx.....xxx......x......xxx..x...
 
 MESSAGE Level 5
 Message Collect 7 Tools to Fix the Car
 (17z)
-
-..xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...
+)
+(
++.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...
 .x................g...................g...........x.
 xx................x....!x..z?.....x............x..x.
-xx..g........x..g..x...C.....$#.g..x..............x.
+xx..g........x..g..x...c.....$#.g..x..............x.
 xx..........x........nuzuuuuu{zun.....x......x....x.
 xx..x............g..nuffff#ff~ffun...x.....z..x...x.
 xx...x....?.g......nufffyfnffffffun....$.g........x.
-xx.....g.!#.......nufff6ffnfffffffun...!C....x....x.
-xx.......nzuu{uuuuufffffffnff6fffffuuuuuzun.x.....x.
-xx.......nfff}fffCffffff3fnfoffff5fCffffffn.......x.
-xx.......nfffff3fnffffffffnffff3fffnof4fffn.......x.
-xx....g..nfffffffnff5ff2ffnffffffyfnf5fyffn..g....x.
-xx.......nffff%yfnflffff4fnfff4ffffnflffffn....$..x.
+xx.....g.!#.......nufff%ffnfffffffun...!c....x....x.
+xx.....#.nzuu{uuuuufffffffnff%fffffuuuuuzun.#.....x.
+xx.......nfff}fff#ffffff3fnfoffff5f#ffffffn.......x.
+xx.....#.nfffff3fnffffffffnffff3fffnof4fffn.#.....x.
+xx....g..nfffffffnff5ff2ffnffffffyfnf2fyffn..g....x.
+xx.....#.nffff%yfnflffff4fnfff4ffffnflffffn....$..x.
 xx..x....nfffffffnffffffffnffffffffnffffffn.?#.z..x.
 xx.x..nuuuzuuuuuunuzuuuuuunuuuuuuzunuuuuzunuuzn.!x..
 xx....nffffffffffnffffffffnffffffffnffffffnfffn.x.x.
 xx....nfo%yffff2fnffffff6fnfo%fff2fnf6ffffnfyfn..?x.
 xx....nffffffffffnffffffffnffff4fffnff3fffnfffn.x.x.
-xx....nffffffff4fnffffffyfnff6fffffnffff5fnfyfnx$.x.
+xx....nffffffff4fnffffffyfnff6fffffnffff%fnfyfnx$.x.
 xx....nflffffffffnflff2fffnflfff5ffnflfoffnfffn..g..
 xx..g.nffffffffffnffffffffnffffffffnffffff#fffn.!xxx
 xx....uuuuuuuuuuzuuuuuuuuzuzuuuuuuuuuuuuuuuuuuulx.xx
-xx..............#g......gC!#......x........x...x..xx
+xx..............#g......gc!#......x........x...x..xx
 xx.....g......?..........?.g..........z...x..x....xx
-xxP.............$................g............x...x.
+xxp.............$................g............x...x.
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..
 
 MESSAGE Level 6
 Message The Garage is Surrounded by the Evil Biker Gang. Get both yourself & the Girl to the Town
 (18z)
-
-....xxxxxxxxxxxxxxx..
-...x........x.ww.x.x.
-..xx.........x..x..xx
-...x..............x.x
-..xx....x....x...x.xx
-..xx.....x......x..xx
-...x....x......x.x.x.
-..xx..x.......x....xx
-..xx....x....x...x.xx
-..xx.....x....x....xx
-...x..x...!....x...x.
-..xx.....x....x....xx
+)
+(
+.xx.xxxxxxxxxxwwxxx..
+xx.xx.......x.ww.x.x.
+x.xx.........x..x..xx
+xx.x..............x.x
+..x.....x....x...x..x
+x.x......x......x..x.
+.x.x....x......x.x.x.
+.xxx..x.......x.....x
+xxx.....x....x...x..x
+.xx......x....x....xx
+x..x..x...!....x...x.
+..xx.....x....x.....x
 ..xxz...x..g.x..z..xx
-..xx.....x....x....x.
-..xxg..........x...xx
-...x.....x....x....x.
-..xx....x....x.....xx
-..xx.....x...x...g.xx
-..xx.x......x..x...x.
-...x..x...xx....x..xx
-..xx.....x?........xx
-..xx....x....x.....x.
-...xx....#.g..x....xx
-..xx.x......x......xx
-...x..x....x...x...xx
-..xx...x...........xx
-..xx..z.x.x..x....zx.
-..xx.....x.x..x....xx
-...x........x...x..xx
+x.x......x....x....x.
+.xx.g..........x....x
+xx.x.....x....x....x.
+xxxx....x....x......x
+..x......x...x...g.xx
+x.x..x......x..x...x.
+...x..x...xx....x...x
+xxx......x?........xx
+.xx.....x....x.....x.
+x..xx....#.g..x....x.
+.xxx.x......x.......x
+...x..x....x...x....x
+..x....x...........xx
+.xx...z.x.x..x....zx.
+xxx......x.x..x.....x
+.x.x........x...x..x.
 ..xx..x...x..x..!..xx
-..xx.x.....$..x....x.
-..xx....x....x...x.xx
-..xx.....x..g.#....xx
-...x..x............x.
-..xx...........x...xx
-..xx.x..x..x....x..xx
-..xx...........z...x.
-...x.x..x....x....xx.
-.xx....x.x.xx...x.x..
-.xx.x..x..x..x.x..xx.
-.xx..x..x!.x..x...xx.
-..x...x.....x.....x..
-.xx..x....gx...z..xx.
-.xx...x.....x.....xx.
-..x....x..........xx.
-.xx.......x......xx..
-.xx..x.....#...xx.xx.
-.xx.x.x...x...x...xx.
-..x....x......x.z.xx.
-.xx..z..x.z....x..xx.
-.xx......x.?....x.x..
+x.x..x.....$..x....x.
+x.x.....x....x...x..x
+.xx......x..g.#....x.
+.x.x..x............x.
+x.x............x....x
+..x..x..x..x....x..x.
+x.x............z...x.
+.x.x.x..x....x....xx.
+xxx....x.x.xx...x.x.x
+xx..x..x..x..x.x...x.
+xx...x..x!.x..x...xx.
+..x...x.....x.....x.x
+.xx..x....gx...z...x.
+.x....x.....x......x.
+x.x....x..........xx.
+.x........x......xx.x
+.x...x.....#...xx..x.
+.x..x.x...x...x...xx.
+x.x....x......x.z..x.
+xxx..z..x.z....x...xx
+.x.......x.?....x.x.x
 ..x.....x......x..xx.
-.xx....x..g...x...xx.
-..x.....x......x..xx.
-.xx....x......x...x..
-.xx...x......x....xx.
-..x....x...x......x..
-.xx.......x.......xx.
-.xx..x.....x.x..x.xx.
-.xx....x..z...x...x..
-..x...x..#.!......xx.
-.xx.x...x..x......xx.
-.xx...x.....g.....xx.
-..x.x....x.....x..x..
+.x.....x..g...x....x.
+x.x.....x......x...x.
+.x.....x......x...x.x
+.x....x......x....xx.
+x.x....x...x......x.x
+.x........x........x.
+.x...x.....x.x..x..x.
+.x.....x..z...x...x.x
+x.x...x..#.!......xx.
+.x..x...x..x.......x.
+.x....x.....g......x.
+x.x.x....x.....x..x.x
 .xx...$.x.........xx.
-.xx..?.........x.x.x.
-.xx........xx...x.xx.
-..x.x.....x..x.x..xx.
-.xx..x.....x..x...x..
-..x...x..g..x.....xx.
-.xx..x.....x...z..xx.
-.xx...x.....x.....xx.
-.xx....x...x......x..
-.xxd......x......dxx.
-..x..x.....#.x..x.xx.
-.xx....x......x...x..
-.xx.x......x..!...xx.
-.xx...x......x.?..x..
-..x.....x.......d.xx.
-.xx.x..........x..xx.
-.xx..d.......x....x..
-xx..z.x......x...xx..
-xx.x.x........d..xx..
-.x..x........x...xx..
-xx..........x....x...
+.x...?.........x.x.x.
+.x.........xx...x.xx.
+x.x.x.....x..x.x...x.
+.xx..x.....x..x...x.x
+x.x...x..g..x......x.
+.x...x.....x...z...x.
+.x....x.....x.....xx.
+.xx....x...x......x.x
+.xxd......x......d.x.
+x.x..x.....#.x..x..x.
+.x.....x......x...x.x
+.x..x......x..!...xx.
+.x....x......x.?..x.x
+x.x.....x.......d..x.
+.xx.x..........x...x.
+.xx..d.......x....x.x
+xx..z.x......x...xx.x
+x..x.x........d...x.x
+.x..x........x....xx.
+xx..........x....x.x.
 xx...............xx..
-.xx..d...........xx..
-xx.x...!x.....x..xx..
-xxx..?...........xx..
-.x.$......x..x...x...
-xx..........x....xx..
-.x.d.............xx..
+.xx..d............xx.
+x..x...!x.....x...x.x
+x.x..?...........x..x
+.x.$......x..x...x.xx
+xx..........x.....xx.
+.x.d..............xx.
 xx..........d....xx..
-xx...x......x....x...
-.x.........x..!.zxx..
-xxz.x.x.....x..?.xx..
-xx.x...#......d..xx..
-xx..d.........x..x...
-xx..........x....xx..
-.x....x......x...xx..
-xx...x.......d...x...
-xx...........x...xx..
-xxz.x.......x....xx..
-.x.x.............x...
-xx..d............xx..
-xx...........dx.zxx..
-.x.............x.xx..
+xx...x......x....x.x.
+.x.........x..!.z.x.x
+xxz.x.x.....x..?..x.x
+x..x...#......d..x.xx
+x...d.........x..x..x
+xx..........x.....xx.
+.x....x......x...xxx.
+xx...x.......d...x.x.
+x............x....x.x
+xxz.x.......x.....xx.
+.x.x.............x.x.
+xx..d............xxx.
+xx...........dx.zxx.x
+.x.............x.xx.x
 x..................x.
 x.d............d...xx
-xd..............d..xx
-x........ip.....?..xx
+xd..............d...x
+x........ip.....?...x
 x.......4..5.....$.xx
-xz....d.2Ca3d.....zx.
+xz....d.2ca3d.....zx.
 .xxxxxxxxxxxxxxxxxxx.
 
 MESSAGE Level 7
 Message Welcome to the town of Grantville!
 Message Collect 9 First Aid Kits
 (32z)
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....
-xxx....g.....g.......g...g..#.....g.....g....g.....g.....x..
+)
+(
++.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx....
+.xx....g.....g.......g...g..#.....g.....g....g.....g.....x..
 xxx..x...............x....!x.#..z?.#...x..............x..xx.
-.xxxxxx.......x..g....x...#...C...$..g#.x..........C.....xx.
+.xxxxxx.......x..g....x...#...c...$..g#.x..........c.....xx.
 ..x.xknuuuuuuuuuun.nuuuuuuzun.nuuuuuuuzn.nuuuuuuuuuzun...xx.
 ....!.nfff#ffffffn.nffffffffn.nffffffffn.nfffffffffffng..xx.
-..xg..nfffnffofffn.nff%fffffn.nfffoffkfn.nffffy%offffn...xx.
+..xg..nfffnffyfffn.nff%fffffn.nfffoffkfn.nffffo%yffffn...xx.
 ..x.$xnf%fnf%ffffn.nfffffyffn.nffffffffn.nfffffffffffn...xx.
 ...x!.nzuunuuu{uun.nuuu{uuzun.nuzuuuuu{n.nuzuuuuuuuunu.x.xx.
-..x.x.nfffnfff~ffn.nfff}ffffn.nfffffff~n.nffffffffffn....xx.
-.xx?..nfofnffffyfn.nfoffff%fn.nfyfff%ofn.nfoffffffkfn.x..xx.
-.xx.x.nfffnffffffn.nffffffffn.nffffffffn.nffffff%fffnx...xx.
+..x.x.nfffnfff~ffn.nfff}ffffn.nfffffff~n.nffffffffffn.....x.
+.xx?..nfofnffffyfn.nfoffff%fn.nfofff%yfn.nfoffffffkfn.x...x.
+.xx.x.nfffnffffffn.nffffffffn.nffffffffn.nffffff%fffnx....x.
 .x.x!.uzuuuuzuuuuu.uuzuuuuuuu.uuuuuuuzuu.uuuuuuuzuuuu..x.xx.
-.xx...............#.......!......?.......C...........#...xx.
-.xnuuuuuuun.nzuuuuuuu.nnuuunuu{uu#nu{uuuu{un.nuuuuuzunx..xx.
+.xx...............#.......!......?.......c...........#...xx.
+.xnuuuuuuun.nzuuuuuuu.nuuuunuu{uu#nu{uuuu{un.nuuuuuzunx..xx.
 .xnfffffffn.nfffffff#.nffffnff}f..nf}ffff~fz.nfffffffn..x.x.
-.xnfk%ffffn.nfffff%fn.nffffnffffn.nffff%fffn.nyfoffffn...xx.
-.xnfyfffffzCnfffffffn.nff%fnfoffn.nffffffyfn.nf%ff%ffn.x.xx.
-.xnfffffffn.nfffffff..#fyffnffofn.nf%ffffffn.#fffffffnx..xx.
+.xnfk%ffffn.nfffff%fn.nffffnffffn.nffff%fffn.nofyffffn...xx.
+.xnfofffffzcnfffffffn.nff%fnfoffn.nffffffyfn.nf%ff%ffn.x.xx.
+.xnfffffffn.nfffffff..#foffnff%fn.nf%ffffffn.#fffffffnx..xx.
 .xnfffffffn.nfffffyfn.nfkffuffyfn.nfffyffffn.nfkfffffn..$xx.
 .xnfffffffn.nfffffffn.nfffffffffn..fffff#ffn.nfffffffy#.zx..
 .xuuuuuuuuu.uzuuuuuuu.uuuuuuuuuuu.uuuuuuzuuu.uuuuuuuuu..x...
-..........................!...C..?......#.............x..x..
+..........................!...c..?......#.............x..x..
 xx.x.nuuuzuuu{uun#nuzuuuuuun.nuuuuuuuzun.n.uuuuuuuuunx...x..
 xxx..nfffffff~ffn.nffffffffn.nfffffffffn.nffffffzfffn.x.x...
-xxx..nffffffff%on.nffffffyfn.nf%fffffofn.nfyffffnfofn..?x...
+xxx..nffffffff%yn.nffffffyfn.nf%fffffofn.nfoffffnfofn..?x...
 xxx..nffffffffffn.nffffffffn.nffffyffffn.nff%fffnfffn.x.x...
-xxx!.unzuuuuuu{un.nuuuuuu{zn.nuu{uuuuzun.nuuuu{yuuuzn..x.x..
+xxx!.unzuuuuuu{un.nuuuuuu{zn.nuu{uuuuzun.nuuuu{ynuuzn..x.x..
 xxx...nfffffff}fn.nffffff~fn.nff}ffffffn.nffff~fnfffnx.$x.x.
 xxx...nfffffffffn.nfkffofffn.nffffff%ffn.nfkfoffnf%fn.g..x..
 xxxg..nfffffffffn.nffffffffy.nfffffffffn.nffffff#fffn!......
 xxx...uuuuuuuuu.u.uuuuuuuuuu.uzuuuuuuuuu.uuuu#uuuuuuukx.?x..
-xxx..............#g........gC!#.#g.....x.x..x...x....x$.zx..
+xxx..............#g........gc!#.#g.....x.x..x...x....x$.zx..
 xxx.....g......?.......g....?...g............zx..x.x.....x..
 .xx...........z..$....................g....x.x.x.x..x....x..
-..xP......................................x.x..x...x.xx.x.x.
+..xp......................................x.x..x...x.xx.x.x.
 ...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx......xxx....x.x..
 
 Message Level 8
 Message The Evil Biker Gang has found you
 Message They have set the town on fire
 Message Exit on the South side of town. Don't let the fire surround you
-
+)
+(
 xxxxxxxxxxxxxxxxxxxxxxxxxx3xddxxxxxxxxxxxxxxdxxxxxxxxxxx..
 xx..d.g.....g.......g...g..4.....g.....#.d..gd....g..d..x.
-xx..xd..............x....!x.2...?.C...x....d....d...dxd.xx
-xx.xxx.......x..g....x...#...5.z.$..gC.x..d......d#d....xx
+xx..xd..............x....!x.2...?.c...x....d....d...dxd.xx
+xx.xxx.......x..g....x...#...5.z.$..gc.x..d......d#d....xx
 .x.x.nuuuuuuuuuun.nuuuuuuzun.nuuuuuuuzn.nuuuuuuuuu#un.d.xx
-..x!.nfffCffffffn.nffffffffn.nfffffff&n.nfffffiPffffng..xx
-.xg..nfffnffofffn.nff%fffffn.nfff#ffffn.nffffy%offffn.d.xx
+..x!.nfffcffffffn.nffffffffn.nfffffff&n.nfffffipffffng..xx
+.xg..nfffnffyfffn.nff%fffffn.nfff#ffffn.nffffo%yffffn.d.xx
 .x.$xnf%fnf%ffffn.nfffffyffn.nffffffffn.nfffffffffffn...dx
 ..x!.nzuunuuu{uun.nuuu{uuzun.nu.uuuuu{n.nu#uuuuuuuunu.x.xx
 .x.x.nfffnfff~ffn.nfff}ffffn.nfffffff~n.nffffffffffn...dxx
-xx?..nfofnffffyfn.nfoffff%fn.nfCfff%ofn.nfoffffffffn.x..xx
+xx?..nfofnffffyfn.nfoffff%fn.nfcfff%yfn.nffofffffffn.x..xx
 xx.x.nfffnffffffn.nffffffffn.nffffffffn.nffffff%fffnx...dx
-x.x!.u#uuuuzuuuuu.uuzuuuuuuu.uuuuuuu.uu.uuuuuu#uuuuu..x.xx
-xx...............#.......!......?.......C..........&#...xx
-xnuuuuuuun.nzuuuuuuu.uuuuuuuuuu.Cnuuuuuuuu...uuuuuzunx..xx
+x.x!.u#uuuuzuuuuu.uuzuuuuuuu.uuuuuuu.uu.uuuuuu.uuuuu..x.xx
+xx...............#.......!......?.......c..........&#..dxx
+xnuuuuuuun.nzuuuuuuu.uuuuuuuuuu.cnuuuuuuuu...uuuuuzunx..xx
 xnfffffffnenfffffff#.nffffnff%f..nfoffff%fz.n&ffffffn..x.x
-xnff%ffffn.nfffff%fnenffffnffffn.nffff%fffn.nyfoffffn...xx
-xnfyfffffzCnfffffffn.nff%fnfoffn.nffffffyfn.nf%ff%ffn.x.xx
-xnfffffffn.nfffffff..Cfyffnffofn.nf%ffffffn.#fffffffnx..xx
-xnfffffffn.nfffffyfn.nf.ffuffyfn.nfffyffffn.nfffffffn..$xx
-xnfzffffzu.nfffffz.n.nfffffffffn..fffffCffu.nfffffffn#.zx.
+xnff%ffffn.nfffff%fnenffffnffffn.nffff%fffn.nofyffffn...dx
+xnfofffffzcnfffffffn.nff%fnfoffn.nffffffyfn.nf%ff%ffn.x.xx
+xnfffffffn.nfffffff..cfyffnff%fn.nf%ffffffn.#fffffffnx..xx
+xnfffffffn.nfffffyfn.nf.ffuffyfn.nfffyffffn.nfffffffn..$dx
+xnfzffffzu.nfffffz.n.nfffffffffn..fffffcffu.nfffffffn#.zx.
 xuuuueuuu..ezuu&uuuu..uuuuuuuuuu.uuuuuu.uu...uuuuuuuu..x..
-xx.d...&............e....!...C..?......#.............x..x.
+xx.d...&............e....!...c..?......#.............x.dx.
 x.x.duuuu&uu{eun#nuzuu.uuun.nuuuuuuuzun.n.uuuuuuuuuex...x.
 xx.dnfffffff~ffn.nfyffffffn.nfffffffffn.nffffffzfffn.x.x..
-xx..&ffffffff%ou.u.fefffyfn.nf%fffffofn.nfyffffnfofn..?x..
+xx..&ffffffff%yu.u.fefffyfn.nf%fffffofn.nfoffffnfofn..?x..
 xxd.nffffzzffff...ffffffffu.nffffyffffn.nff%fffnfffn.x.x..
 xx!.un.uuuuuu{un..uuu.uu{...nuu{uuuuzun.nuuuu{unuuzn..x.x.
 xxd..ufffffff}fu.uffffff~fn.nff}ffffffn.nffff~fnfffnx.$x.x
-xx.d.&fffffffff...f%feofffn.nffffff%ffn.nf.foffnf%fn.g..x.
+xx.d.&fffffffff...f%feofffn.nffffff%ffn.nf.foffnf%fn.g.dx.
 xxd..nfffffffffu.ufffff.f.n.nfffffffffn.nffffff#fffn!...x.
-xx..duueuu&uuuu...euu.uuuuu.uzuuuuuuuuu.uuuuCuuuuuuu.x.?x.
-xx.d..d.........C.........g#!C.#g.....x.xe.x...x....x$.zx.
+xx..duueuu&uuuu...euu.uuuuu.uzuuuuuuuuu.uuuucuuuuuuu.x.?x.
+xx.d..d.........c.........g#!c.#g.....x.xe.x...x....x$.zx.
 xxd..d.g......?............?................zx..xzx..z..x.
 xx..d...d....z..$.........................x.x.x.x..x....x.
-.x...d...d...............................x.x..x...x.xx.x.x
+.x...d...d.................tt............x.x..x...x.xx.x.x
 ..xxxxxxxxxxxxxxxxxxxxxxxxxttxxxxxxxxxxxx......xxx....x.x.
 
 Message Level 9
 Message Get to the Blue Garage. Don't let the fire surround you
-
+)
+(
 ...xggxxxxxxx&exxxxxxgg
 ...xexgdgd&xeJJ&xegdgxg
 ...xgxdgdg..x..x.gdgdx&
@@ -1109,52 +1122,55 @@ xgx.................gx.
 gxg..................xg
 xgx............?.....gx
 xxg......4..5...$....xx
-gxg......2.a3.....g..x.
-g.xgxxxxxxttxxxxxxxxx..
+gxg......2tt3.....g..x.
+g.xgxxxxxxtaxxxxxxxxx..
 
 Message Level 10
 Message Exit on the South side of the Garage.
-
-ggxxxxxxxxxxxxx&xexxxxxxxiPxxxx&xex&xex&xexxxxxxxxggx
+)
+(
+ggxxxxxxxxxxxxx&xexxxxxxxipxxxx&xex&xex&xexxxxxxxxggx
 gxg.....z.....g.g.g.......……egeg.&geg.g.g.g.......xgx
 eggg..z....z...g.gxg...!x...?….g&gxgeg.g.g.....xz.gex
-gx.gg....z...x..g.gx...C.....$#…….gxg&g.g.........xgx
+gx.gg....z...x..g.gx...c.....$#…….gxg&g.g.........xgx
 xg..gg.....zx.....g.gnu.uuuuu{.un……gegxg.....x...g.xx
-gx..xgg..........g..nuffffCff~ffun……gx....g...x.g.xgx
+gx..xgg..........g..nuffffcff~ffun……gx....g...x.g.xgx
 xg...xgg..?.g.z....nufffyfnffffffun……….$…….....g..gxx
-gx.....gg!#.......nufff6ffnfffffffun………!C……..x.2..xgx
+gx.....gg!#.......nufff6ffnfffffffun………!c……..x.2..xgx
 xg......gnzuu{uuuuufffffffnff6fffffuuuuu.un.3.4.5.gxx
-gx.g.....nfff}fff#ffffff3fnfoffff5fCffffffn6….….…3x…x
+gx.g.....nfff}fff#ffffff3fnfoffff5fcffffffn6….….…3x…x
 xg.......nfffff3fnffffffffnffff3fffnof4fffn..………………x…
 gx.......nfffffffnff5ff2ffnffffffyfnf5fyffn..g…………x…x
 xgx......nffff%yfnffffff4fnfff4ffffnffffffn.………$………x…
 x..4x....nfffffffnffffffffnffffffffnffffffn…?#…………x…x
-…x…x5.nuuuzuuuuuunuzuuuuuunuuuuuuzunuuuuCunuu.n…!xgxx
+…x…x5.nuuuzuuuuuunuzuuuuuunuuuuuuzunuuuucunuu.n…!xgxx
 z…zz…3zffffffffffnffffffffzffffffffnffffffnfffn…x…xgx
 zxz…z…zfo%yffff2fzffffff6fnfo%fff2fnf#ffffnfyfn……?gxx
-z…zz…z…ffffffffffnffffffffzffff4fffnffCfffnfffn…x…x…x
+z…zz…z…ffffffffffnffffffffzffff4fffnffcfffnfffn…x…x…x
 zzz…z…z…fffffff4fzffffffyfnff6fffffnffff#fnfyfnx$……xx
-zz…z…z…zz…zz…zz…fnffff2fffzfffff5ffnfffoffnfffn………Cg5
+zz…z…z…zz…zz…zz…fnffff2fffzfffff5ffnfffoffnfffn………cg5
 z…z…z…z…zffzffzffzffffffffnffffffffnzfffff#fffn……x.3x
-zz…zz…zz∪zz∪zz∪zzuz∪uz∪uzz∪z∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪…C...x
-z…z…zz…zzzz…z….z6z…z…z…z…2!4….….….x….….….….x………x.6#C.
-zz…zz…z…z…z…z…z…z…z…z…z…#………………………………………….x……x……C...x
-z…z…zz…z…z…z…z…z$z…z…z…..…….…………………………………….………x……#.xx
-zz…z…zz…z…z…z…zzxzxzx…x.xttxxxxxxxxxxxxxxxxxxxxxxxxxx
+zz…zz…zz∪zz∪zz∪zzuz∪uz∪uzz∪z∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪∪…c...x
+z…z…zz…zzzz…z….z6z…z…z…z…2!#….….….x….….….…x.………x.6#c.
+zz…zz…z…z…z…z…z…z…z…z…z…#…………………………………………x.…x.……c...x
+z…z…zz…z…z…z…z…z$z…z…z…#.tt.…………………………………….……x.……#.xx
+zz…z…zz…z…z…z…zzxzxzx…x.xttxxxxxxxxxxxxxxxxxx.x...x.x
 
 Message Level 11
 Message Get to the Farm
+)
+(
 ..xxxxx&xex&xex&xxxxxxxxxxx&xxxxxxxxxx&xxxxxx&xxx
 .xz…x…z.z.g.g.!.............g.g.g.!..g.g.?.g.g.xx
-xx…z…z.z.g?g......x.....x.?g.....C......x.x..!gxx
+xx…z…z.z.g?g......x.....x.?g.....c......x.x..!gxx
 xxz…z…zx..geg......xg.x..x......x....x.x.x.g.g.xg
-xx…z…zx..g&a.iP.g...x..x..$x..z.!..x.x......?.gx.
+xx…z…zx..g&a.ip.g...x..x..$x..z.!..x.x......?.gx.
 .x……z…gx..!e.#x......x...?.xgx.....x.........g.xg
 xx…z…z…zx.x.g.#.?......x......x.....x...x.....gxx
 .xz…z$zx......x#....?x.....x.x.....x$.x..x..g.exg
 xx…z…z…zx.x.g…..#......x...….…x.....x..x......gxx
-x.z…z…z…zx.x…x….…#.x..xz………2…x….….x..x......x..xg
-.x…z…z…z…zz…xxx…x…#.x….…6.5.4…x…x.;x...x....?.xg.
+x.z…z…z…zx.x…x….…#.x..xz………2…c….….x..x......x..xg
+.x…z…z…z…zz…xxx…x…#.x….…6.5.c…x…x.;x...x....?.xg.
 xxz…x…z…z…z!6..x.x….…x…4.3....…x…x....x...g..xgxg
 xx…z…z…x…5…x......x…x.2......gx..…..!;..x.....exx
 x…z…z…x.x;x....g...x......x....x....z.g..x...!gxg
@@ -1162,11 +1178,12 @@ x…z…z…x.x;x....g...x......x....x....z.g..x...!gxg
 xx3…xg..x..;g;.....x........!.x..x.x...g.....xgxg
 x..x.....!.x.;g;.............x..$..gx..;......exx
 x.….g........x.;g;$....x;g;........?....g...x.gxg
-xh…..........?...;g;.g;g.x.gg.;g;.g;.g;g;g;g.g.x.
-xttxxxxgxxgxxgxxgxxgxxgxxgxxgxgxgxgxgxgxgxgxgxg.g
+xtt..........?...;g;.g;g.x.gg.;g;.g;.g;g;g;g.g.x.
+xht.xxxgxxgxxgxxgxxgxxgxxgxxgxgxgxgxgxgxgxgxgxg.g
 
 Message Level 12
 Message Get to the Boat
+)
 
 *****************x.zx.zx.zx.zxz.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxx.xxx.g..xxx.xxxxxxxxxxxxxxx.xxxxxexxxxxxxxxxxxxxexxxxx.xxxxx.xxxxxxxxxxxz.xz.xz.xz.xz.xz.xz.
 ****₇₆₅*********x2ddxdddxd.dx536.432x536xxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxx.xxxxxxx.g.g..xxxxxxx.xxxxxxxxxxxxxxx.xxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxd.dxdddxddxxxxxxx.xxxxexxx&x
