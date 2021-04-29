@@ -1,4 +1,5 @@
 title Return of the Dead Pixels
+(v1.20210428)
 author Justin Riley
 homepage www.OhioFi.com
 color_palette 6
@@ -22,6 +23,14 @@ lightgreen green
 00000
 
 Floor
+Gray Lightgray DarkGray
+00000
+00000
+00001
+10000
+00000
+
+ZombieRepellentFloor
 Gray Lightgray DarkGray
 00000
 00000
@@ -554,6 +563,7 @@ z = zombie
 ∪ = fireproofwall
 ✓ = chckpnt
 + = win
+¢ = ZombieRepellentFloor
 goal = target or targetboat or town or barn or girl
 
 =======
@@ -589,7 +599,7 @@ COLLISIONLAYERS
 ================
 
 Background
-Grass, Blood1, Blood2, Blood3,Floor,chckpnt,burntfloor,burntfloor2,fireproofgrass,firestarter
+Grass, Blood1, Blood2, Blood3,Floor,chckpnt,burntfloor,burntfloor2,fireproofgrass,firestarter,ZombieRepellentFloor
 Target, Barn,  Girl, GasStation,GasStation2,town,town2,barn2,targetboat
 Player, tree, Car01, DeadPlayer,dp2,dp3,walls,zombie,tools,Car02,Car03,Car04,Car05,car06,BadGuy,firstAidKit,fire1,fire2,fire3,burntcar,fireproofwall,water,wallboat,Crate
 Blood4,blood5
@@ -610,6 +620,7 @@ late [Player chckpnt] -> [player chckpnt] checkpoint
 [ >  Player | chair ] -> [  >  Player | > chair floor ]
 [ >  Player | table ] -> [  >  Player | > table floor ]
 [ >  Player | Crate ] -> [  >  Player | > Crate  ]
+
 [ stationary zombie ] -> [randomDir zombie]
 [ Player Blood1 ] -> [ Player Blood3 Sfx0]
 [ Player Blood2 ] -> [ Player Blood3 Sfx3]
@@ -618,6 +629,7 @@ late [Player chckpnt] -> [player chckpnt] checkpoint
 vertical [|Blood4|]->[blood5|Blood4|blood5]
 horizontal [|Blood4|]->[blood5|Blood5|blood5]
 [> Zombie|Girl]->[< Zombie|Girl]
+[> zombie|ZombieRepellentFloor] -> [< zombie|ZombieRepellentFloor]
 [Zombie|Target]->[< Zombie|Target]
 [fire|Target]->[< fire|Target]
 late [fire|fireproof]->[burntfloor|fireproof]
@@ -665,7 +677,7 @@ No firstAidKit
 LEVELS
 =======
 
-
+(
 
 MESSAGE Level 1
 MESSAGE Get to the Farm. Don't get Bit
@@ -765,6 +777,8 @@ cap...........?.x.......g..x...........#..........x.
 ..xxxxxxxx#xxxxx.xxx..xxxxx...xxxxxx.xxxxxx...xx.x..
 ...xxxxxx#.#.xxx....xx.....xxx......x......xxx..x...
 
+)
+
 MESSAGE Level 5
 Message Collect 7 Tools to Fix the Car
 (17z)
@@ -779,17 +793,17 @@ xx...x....?.g......nufffyfnffffffun....$.g........x.
 xx.....g.!#.......nufff%ffnfffffffun...!c....x....x.
 xx.....#.nzuu{uuuuufffffffnff%fffffuuuuuzun.#.....x.
 xx.......nfff}fff#ffffff3fnfoffff5f#ffffffn.......x.
-xx.....#.nfffff3fnffffffffnffff3fffnof4fffn.#.....x.
-xx....g..nfffffffnff5ff2ffnffffffyfnf2fyffn..g....x.
-xx.....#.nffff%yfnflffff4fnfff4ffffnflffffn....$..x.
-xx..x....nfffffffnffffffffnffffffffnffffffn.?#.z..x.
+xx.....#.nfffff3fn¢¢¢¢ffffnffff3fffno¢4¢ffn.#.....x.
+xx....g..nfffffffn¢¢5¢f2ffnffffffyfn¢2¢yffn..g....x.
+xx.....#.nffff%yfn¢l¢¢ff4fnfff4ffffn¢l¢¢ffn....$..x.
+xx..x....nfffffffn¢¢¢¢ffffnffffffffn¢¢¢¢ffn.?#.z..x.
 xx.x..nuuuzuuuuuunuzuuuuuunuuuuuuzunuuuuzunuuzn.!x..
 xx....nffffffffffnffffffffnffffffffnffffffnfffn.x.x.
 xx....nfo%yffff2fnffffff6fnfo%fff2fnf6ffffnfyfn..?x.
-xx....nffffffffffnffffffffnffff4fffnff3fffnfffn.x.x.
-xx....nffffffff4fnffffffyfnff6fffffnffff%fnfyfnx$.x.
-xx....nflffffffffnflff2fffnflfff5ffnflfoffnfffn..g..
-xx..g.nffffffffffnffffffffnffffffffnffffff#fffn.!xxx
+xx....n¢¢¢¢ffffffn¢¢¢¢ffffn¢¢¢¢4fffn¢¢3¢ffnfffn.x.x.
+xx....n¢¢¢¢ffff4fn¢¢¢¢ffyfn¢¢6¢ffffn¢¢¢¢%fnfyfnx$gx.
+xx....n¢l¢¢ffffffn¢l¢¢2fffn¢l¢¢f5ffn¢l¢offnfffn¢¢¢..
+xx..g.n¢¢¢¢ffffffn¢¢¢¢ffffn¢¢¢¢ffffn¢¢¢¢ff#fffn¢¢xxx
 xx....uuuuuuuuuuzuuuuuuuuzuzuuuuuuuuuuuuuuuuuuulx.xx
 xx..............#g......gc!#......x........x...x..xx
 xx.....g......?..........?.g..........z...x..x....xx
