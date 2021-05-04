@@ -677,7 +677,7 @@ No firstAidKit
 LEVELS
 =======
 
-(
+
 
 MESSAGE Level 1
 MESSAGE Get to the Farm. Don't get Bit
@@ -777,7 +777,7 @@ cap...........?.x.......g..x...........#..........x.
 ..xxxxxxxx#xxxxx.xxx..xxxxx...xxxxxx.xxxxxx...xx.x..
 ...xxxxxx#.#.xxx....xx.....xxx......x......xxx..x...
 
-)
+
 
 MESSAGE Level 5
 Message Collect 7 Tools to Fix the Car
@@ -803,8 +803,8 @@ xx....nfo%yffff2fnffffff6fnfo%fff2fnf6ffffnfyfn..?x.
 xx....n¢¢¢¢ffffffn¢¢¢¢ffffn¢¢¢¢4fffn¢¢3¢ffnfffn.x.x.
 xx....n¢¢¢¢ffff4fn¢¢¢¢ffyfn¢¢6¢ffffn¢¢¢¢%fnfyfnx$gx.
 xx....n¢l¢¢ffffffn¢l¢¢2fffn¢l¢¢f5ffn¢l¢offnfffn¢¢¢..
-xx..g.n¢¢¢¢ffffffn¢¢¢¢ffffn¢¢¢¢ffffn¢¢¢¢ff#fffn¢¢xxx
-xx....uuuuuuuuuuzuuuuuuuuzuzuuuuuuuuuuuuuuuuuuulx.xx
+xx..g.n¢¢¢¢ffffffn¢¢¢¢ffffn¢¢¢¢fffzn¢¢¢¢ff#fffn¢¢xxx
+xx....uuuuuuuuuuzuuuuuuuuzu#uuuuuuuuuuuuuuuuuuulx.xx
 xx..............#g......gc!#......x........x...x..xx
 xx.....g......?..........?.g..........z...x..x....xx
 xxp.............$................g............x...x.
@@ -938,36 +938,36 @@ Message Collect 9 First Aid Kits
 .xx....g.....g.......g...g..#.....g.....g....g.....g.....x..
 xxx..x...............x....!x.#..z?.#...x..............x..xx.
 .xxxxxx.......x..g....x...#...c...$..g#.x..........c.....xx.
-..x.xknuuuuuuuuuun.nuuuuuuzun.nuuuuuuuzn.nuuuuuuuuuzun...xx.
-....!.nfff#ffffffn.nffffffffn.nffffffffn.nfffffffffffng..xx.
-..xg..nfffnffyfffn.nff%fffffn.nfffoffkfn.nffffo%yffffn...xx.
-..x.$xnf%fnf%ffffn.nfffffyffn.nffffffffn.nfffffffffffn...xx.
+..x.xknuuuuuuuuuun.nuuuuuuzun.nuuuuuuufn.nuuuuuuuuuzun...xx.
+.!..¢¢nfff#ffffffn.nffffffffn.nffff¢¢¢fn.nfffffffffffng..xx.
+..xg..nfffnffyfffn.nff%fffffn.nfffo¢k¢fn.nffffo%yffffn...xx.
+..x.$xnf%fnf%ffffn.nfffffyffn.nffff¢¢¢fn.nfffffffffffn...xx.
 ...x!.nzuunuuu{uun.nuuu{uuzun.nuzuuuuu{n.nuzuuuuuuuunu.x.xx.
-..x.x.nfffnfff~ffn.nfff}ffffn.nfffffff~n.nffffffffffn.....x.
-.xx?..nfofnffffyfn.nfoffff%fn.nfofff%yfn.nfoffffffkfn.x...x.
-.xx.x.nfffnffffffn.nffffffffn.nffffffffn.nffffff%fffnx....x.
+..x.x.nfffnfff~ffn.nfff}ffffn.nfffffff~n.nfffffff¢¢¢n.....x.
+.xx?..nfofnffffyfn.nfoffff%fn.nfofff%yfn.nfofffff¢k¢n.x.....
+.xx.x.nfffnffffffn.nffffffffn.nzfffffffn.nffffff%¢¢¢nx....x.
 .x.x!.uzuuuuzuuuuu.uuzuuuuuuu.uuuuuuuzuu.uuuuuuuzuuuu..x.xx.
 .xx...............#.......!......?.......c...........#...xx.
 .xnuuuuuuun.nzuuuuuuu.nuuuunuu{uu#nu{uuuu{un.nuuuuuzunx..xx.
-.xnfffffffn.nfffffff#.nffffnff}f..nf}ffff~fz.nfffffffn..x.x.
-.xnfk%ffffn.nfffff%fn.nffffnffffn.nffff%fffn.nofyffffn...xx.
-.xnfofffffzcnfffffffn.nff%fnfoffn.nffffffyfn.nf%ff%ffn.x.xx.
-.xnfffffffn.nfffffff..#foffnff%fn.nf%ffffffn.#fffffffnx..xx.
-.xnfffffffn.nfffffyfn.nfkffuffyfn.nfffyffffn.nfkfffffn..$xx.
-.xnfffffffn.nfffffffn.nfffffffffn..fffff#ffn.nfffffffy#.zx..
+.xn¢¢¢ffffn.nfffffff#.nffffnff}f..nf}ffff~fz.nfffffffn..x.x.
+.xn¢k%ffffn.nfffff%fn.nffffnffffn.nffff%fffn.nofyffffn...xx.
+.xn¢o¢ffffzcnfffffffn.nff%fnfoffn.nffffffyfn.nf%ff%ffn.x.xx.
+.xnfffffffn.nfffffff..#¢o¢fnff%fn.nf%ffffffn.#¢¢¢ffffnx..xx.
+.xnfffffffn.nfffffyfn.n¢k¢fuffyfn.nfffyffffn.n¢k¢ffffn..$xx.
+.xnfffffffn.nfffffffn.n¢¢¢ffffffn..fffff#ffn.n¢¢¢ffffy#.zx..
 .xuuuuuuuuu.uzuuuuuuu.uuuuuuuuuuu.uuuuuuzuuu.uuuuuuuuu..x...
-..........................!...c..?......#.............x..x..
+..........................!...c..?......#.............#..x..
 xx.x.nuuuzuuu{uun#nuzuuuuuun.nuuuuuuuzun.n.uuuuuuuuunx...x..
 xxx..nfffffff~ffn.nffffffffn.nfffffffffn.nffffffzfffn.x.x...
 xxx..nffffffff%yn.nffffffyfn.nf%fffffofn.nfoffffnfofn..?x...
 xxx..nffffffffffn.nffffffffn.nffffyffffn.nff%fffnfffn.x.x...
 xxx!.unzuuuuuu{un.nuuuuuu{zn.nuu{uuuuzun.nuuuu{ynuuzn..x.x..
-xxx...nfffffff}fn.nffffff~fn.nff}ffffffn.nffff~fnfffnx.$x.x.
-xxx...nfffffffffn.nfkffofffn.nffffff%ffn.nfkfoffnf%fn.g..x..
-xxxg..nfffffffffn.nffffffffy.nfffffffffn.nffffff#fffn!......
+xxx...nfffffff}fn.n¢¢¢fff~fn.nff}ffffffn.n¢¢¢f~fnfffnx.$x.x.
+xxx...nfffffffffn.n¢k¢fofffn.nffffff%ffn.n¢k¢offnf%fn.g..x..
+xxxg..nfffffffffn.n¢¢¢fffffy.nfffffffffn.n¢¢¢fff#fffn¢¢.....
 xxx...uuuuuuuuu.u.uuuuuuuuuu.uzuuuuuuuuu.uuuu#uuuuuuukx.?x..
 xxx..............#g........gc!#.#g.....x.x..x...x....x$.zx..
-xxx.....g......?.......g....?...g............zx..x.x.....x..
+xxx.....g......?.......g....?...g............zx..x.x...!.x..
 .xx...........z..$....................g....x.x.x.x..x....x..
 ..xp......................................x.x..x...x.xx.x.x.
 ...xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx......xxx....x.x..
