@@ -7,9 +7,9 @@ key_repeat_interval 0.2
 zoomscreen 18x13
 realtime_interval 1
 again_interval 1
-youtube c2K_siojQNI
 noaction
 noundo
+
 ========
 OBJECTS
 ========
@@ -491,7 +491,7 @@ grey blue lightblue darkgrey
 00001
 11111
 
-win
+winState
 transparent
 
 
@@ -562,7 +562,7 @@ z = zombie
 ₇=boat7
 ∪ = fireproofwall
 ✓ = chckpnt
-+ = win
++ = winState
 ¢ = ZombieRepellentFloor
 goal = target or targetboat or town or barn or girl
 
@@ -603,7 +603,7 @@ Grass, Blood1, Blood2, Blood3,Floor,chckpnt,burntfloor,burntfloor2,fireproofgras
 Target, Barn,  Girl, GasStation,GasStation2,town,town2,barn2,targetboat
 Player, tree, Car01, DeadPlayer,dp2,dp3,walls,zombie,tools,Car02,Car03,Car04,Car05,car06,BadGuy,firstAidKit,fire1,fire2,fire3,burntcar,fireproofwall,water,wallboat,Crate
 Blood4,blood5
-win
+winState
 
 ======
 RULES
@@ -612,19 +612,18 @@ RULES
 [dp3]->restart
 [dp2]->[dp3] Sfx5
 [deadplayer]->[dp2] Sfx5 again
-[|Player|Enemy] -> [blood4|DeadPlayer|Enemy Sfx1] again
-late [Player|Tools] -> [Player|Floor Sfx4] checkpoint
-late [Player|firstAidKit] -> [Player|Floor Sfx4] checkpoint
+[|Player|Enemy]->[blood4|DeadPlayer|Enemy ] Sfx1 again
+late [Player|Tools] -> [Player|Floor ] Sfx4 checkpoint
+late [Player|firstAidKit] -> [Player|Floor ] Sfx4 checkpoint
 late [Player chckpnt] -> [player chckpnt] checkpoint
 [ >  Player | Car01 ] -> [  >  Player | > Car01  ]
 [ >  Player | chair ] -> [  >  Player | > chair floor ]
 [ >  Player | table ] -> [  >  Player | > table floor ]
 [ >  Player | Crate ] -> [  >  Player | > Crate  ]
-
 [ stationary zombie ] -> [randomDir zombie]
-[ Player Blood1 ] -> [ Player Blood3 Sfx0]
-[ Player Blood2 ] -> [ Player Blood3 Sfx3]
-[ Player Grass ] -> [Player Sfx2]
+[ Player Blood1 ] -> [ Player Blood3 ] Sfx0
+[ Player Blood2 ] -> [ Player Blood3 ] Sfx3
+[ Player Grass ] -> [Player ] Sfx2
 [Player|...|BadGuy] -> [Player|...| < BadGuy]
 vertical [|Blood4|]->[blood5|Blood4|blood5]
 horizontal [|Blood4|]->[blood5|Blood5|blood5]
@@ -661,14 +660,14 @@ random [fire3|tree] -> [burntfloor2|fire2] Sfx7
 [water2] -> [water3]
 [water1] -> [water2]
 
-[Player goal] -> [Player goal win] again
-[Car01 GasStation] -> [Car01 GasStation win] again
+[Player goal] -> [Player goal winState] again
+[Car01 GasStation] -> [Car01 GasStation winState] again
 
 
 ==============
 WINCONDITIONS
 ==============
-Some Win
+Some winState
 No Tools
 No firstAidKit
 
